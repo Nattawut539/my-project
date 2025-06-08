@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
+
+.wrapper {
+  font-family: 'Prompt', sans-serif;
+  background: #f6f6f9;
+  color: #2f86a5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Header === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: linear-gradient(to right, #111931, #2e2ba7);
+  color: white;
+  flex-wrap: wrap;
+}
+
+.leftHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.appointmentBtn {
+  background: linear-gradient(to right, #111, #999);
+  border: none;
+  border-radius: 16px;
+  padding: 6px 16px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.avatarIcon,
+.menuIcon {
+  width: 32px;
+  height: 32px;
+  background: white;
+  color: #2f86a5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* === Hero Section === */
+.mainContent {
+  flex: 1;
+}
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: #e0e7ff;
+  overflow: hidden;
+}
+
+.heroImg {
+  object-fit: cover;
+  z-index: 1;
+
+}
+
+.heroTextBoxRight {
+  position: absolute;
+  top: 49.9%;
+  right: 0;
+  /* ✅ ชิดขอบขวา */
+  transform: translateY(-50%);
+  width: 50%;
+  background: linear-gradient(to right, rgba(93, 224, 230, 0.65), rgba(0, 74, 173, 0.65));
+  padding: 59.9px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: 2;
+
+}
+
+.heroTitle {
+  font-size: 3.9rem;
+  font-weight: 700;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: white;
+  text-align: left;
+}
+
+
+/* === Highlight Section === */
+.highlightBox {
+  display: flex;
+  align-items: center;         /* จัดกลางตามแนวตั้ง */
+  justify-content: center;     /* จัดกลางตามแนวนอน */
+  gap: 30px;                   /* ระยะห่างระหว่างกล่อง */
+  flex-wrap: wrap;             /* ถ้าจอเล็กเกิน จะให้มันขึ้นบรรทัดใหม่ */
+  padding: 40px 20px;
+  text-align: left;            /* ปรับให้ text ชิดซ้ายในแต่ละกล่อง */
+}
+
+.subText {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #2f86a5;
+  
+}
+.ctaBtn {
+  background: linear-gradient(to right, #8c52ff, #5ce1e6);
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่ */
+  margin-top: -25px;
+}
+.indent {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .heroTextBoxRight {
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: 1.4rem;
+  }
+
+  .ctaBtn {
+    width: 100%;
+  }
+}
