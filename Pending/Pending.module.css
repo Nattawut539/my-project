@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
+
+/* === Layout === */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Prompt', sans-serif;
+  background: #f6f6f9;
+  min-height: 100vh;
+}
+
+/* === Header === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: linear-gradient(to right, #111931, #2e2ba7);
+  color: white;
+}
+
+.leftHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-left: 6px;
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.appointmentBtn {
+  background: #cfcfcf;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+
+.avatarIcon,
+.menuIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Main Layout === */
+.main {
+  display: flex;
+  flex: 1;
+  padding: 40px 60px;
+  gap: 40px;
+  background: #f6f6f9;
+}
+
+.leftPanel {
+  flex: 1.8;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 25px;
+  margin-right: 100px;
+}
+
+/* === Section Title & Toggle === */
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  color: #393d70;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.inlineToggle {
+  display: inline-flex;
+  gap: 10px;
+  margin-left: 14px;
+  vertical-align: middle;
+}
+
+.inlineToggle button,
+.toggleBtn button {
+  padding: 6px 18px;
+  border-radius: 24px;
+  border: none;
+  background: #e0e0e0;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.inlineToggle .active,
+.toggleBtn .active {
+  background: #111931;
+  color: white;
+}
+
+/* === Calendar === */
+.calendarContainer {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 500px;
+  margin-top: 0;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.pending {
+  position: relative;
+  z-index: 2;
+}
+
+.monthText {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin: 0;
+}
+
+.navGroup {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.calendarNavBtn {
+  background: #393d55;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dayName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #393d55;
+  text-align: center;
+}
+
+.dayCell {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dateNumber {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.dayName {
+  font-size: 0.75rem;
+  color: #393d55;
+}
+
+/* === Form === */
+.bookingForm {
+  background: transparent;
+  box-shadow: none;
+  padding: 20px 0;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 300px;
+}
+
+.formTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #393d55;
+  padding-bottom: 4px;
+}
+
+.input,
+.dropdown,
+.submitBtn {
+  font-size: 1rem;
+  margin-left: 40px;
+  width: fit-content;
+}
+
+.input,
+.dropdown {
+  padding: 10px 14px;
+  border: none;
+  border-bottom: 2px solid #393d55;
+  outline: none;
+  background: transparent;
+  color: #393d55;
+}
+
+.input::placeholder {
+  color: #ff914d;
+  opacity: 1;
+}
+
+.labelWithIcon {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #393d55;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown option {
+  background: #f6f7ff;
+  color: #393d55;
+}
+
+.dropdown option:hover {
+  background-color: #f0f0f0;
+  color: #111931;
+}
+
+.timeSlotContainer {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeSlot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #393d55;
+}
+.labelRow {
+  margin-left: 40px;
+  margin-bottom: 4px;
+}
+
+.timeRow {
+  display: flex;
+  gap: 20px;
+  margin-left: 40px;
+  margin-bottom: 70px;
+}
+
+.timeDropdown {
+  font-size: 0.90rem;
+  font-weight: 400;
+  color: #393d55;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 2px solid #393d55;
+  background: transparent;
+  width: fit-content;
+  
+}
+
+
+.submitBtn {
+  background: #111931;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 100px;
+  display: block;
+}
+
+.noteText {
+  font-size: 0.75rem;
+  color: #b83232;
+  margin-top: 6px;
+}
+
+/* === NEW: Readonly Date === */
+.readonlyDate {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-left: 40px;
+  color: #393d55;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 2px solid #393d55;
+  background: transparent;
+  width: fit-content;
+}
+.today {
+  background-color: #38b6ff;
+  color: white;
+  font-weight: 700;
+  padding: 20px 20px; /* เพิ่ม padding บน-ล่าง ให้ยาวขึ้น */
+  border-radius: 50px; /* ให้มนทั้งบนล่าง เหมือนแคปซูล */
+  font-size: 0.9rem;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: white;
+  background: linear-gradient(to right, #111931, #2e2ba7);
+  justify-content: space-between;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    flex: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rightPanel {
+    justify-content: center;
+    margin-right: 0;
+    padding-top: 20px;
+  }
+
+  .calendarContainer {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .bookingForm {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .input,
+  .dropdown,
+  .submitBtn,
+  .readonlyDate {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .timeSlotContainer {
+    padding-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .timeSlot {
+    width: 48%;
+  }
+
+  .titleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .inlineToggle {
+    margin-left: 0;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .leftHeader,
+  .rightHeader {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navGroup {
+    right: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Reserved for tablet */
+}
+
+@media (hover: none) {
+  .dropdown option:hover {
+    background-color: inherit;
+    color: inherit;
+  }
+}
